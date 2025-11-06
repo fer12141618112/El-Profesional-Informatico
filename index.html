@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>El Profesional Informático</title>
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background-image:url("fondo.png");
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+header{
+  background:rgba(0,0,0,0.7);
+  color:white;
+  text-align:center;
+  padding:25px;
+  font-size:35px;
+  font-weight:bold;
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:999;
+}
+nav{
+  position:fixed;
+  top:110px;
+  width:100%;
+  background:rgba(0,0,0,0.5);
+  text-align:center;
+  padding:15px;
+}
+nav button{
+  font-size:18px;
+  margin:10px;
+  padding:12px 25px;
+  border:none;
+  border-radius:8px;
+  background:#0056d6;
+  color:white;
+  cursor:pointer;
+  font-weight:bold;
+}
+nav button:hover{
+  background:#003d9c;
+}
+.contenedor{
+  margin-top:190px;
+  padding:30px;
+  color:black;
+  text-align:center;
+}
+.contenedor p{
+  background:rgba(255,255,255,0.9);
+  padding:20px;
+  border-radius:10px;
+  max-width:950px;
+  margin:auto;
+  font-size:18px;
+  text-align:justify;
+  line-height:1.6;
+}
+img, video, audio{
+  width:70%;
+  border-radius:10px;
+  margin-top:20px;
+}
+.umb{
+  margin-top:45px;
+  font-weight:bold;
+  opacity:0.7;
+}
+</style>
+</head>
+<body>
+
+<header>EL PROFESIONAL INFORMÁTICO</header>
+
+<nav>
+<button onclick="mostrar('menu')">Menú Principal</button>
+<button onclick="mostrar('perfil')">Perfil Profesional</button>
+<button onclick="mostrar('ambitos')">Ámbitos Laborales</button>
+<button onclick="mostrar('etica')">Ética Profesional</button>
+<button onclick="mostrar('herramientas')">Herramientas y Conocimientos</button>
+</nav>
+
+<div class="contenedor" id="contenido">
+  <!-- contenido inicial -->
+  <p>Da clic en un botón para ver la información del tema.</p>
+</div>
+
+<script>
+function mostrar(seccion){
+  let html = "";
+
+  if(seccion==="menu"){
+    html = `
+    <p>
+    El profesional informático en la actualidad es una figura indispensable dentro de la sociedad moderna. La tecnología se ha convertido en un elemento fundamental para la comunicación, los negocios, la ciencia, la educación, la política y prácticamente todas las actividades cotidianas. Por ello, el menú principal busca contextualizar el poder y la importancia del área computacional dentro del mundo actual. La informática permite automatizar procesos, analizar grandes cantidades de datos, desarrollar plataformas digitales, diseñar sistemas inteligentes y optimizar tareas de manera que antes era imposible. Esta disciplina no solo se limita a programar o reparar computadoras; hoy un informático puede contribuir a la economía global, al desarrollo de ciudades inteligentes, al análisis clínico, a la seguridad cibernética, al diseño de inteligencia artificial, al desarrollo de aplicaciones móviles, videojuegos, robótica y sistemas embebidos.
+    Además, un profesional informático es responsable de entender las necesidades del usuario y traducirlas en soluciones tecnológicas funcionales. Para ello se requiere pensamiento lógico, creatividad, capacidad de aprendizaje continuo, dominio de algoritmos, matemáticas, estructuras de datos, arquitectura computacional y metodologías para el desarrollo de software. Este profesional también debe saber documentar, comunicar y presentar resultados, porque de nada sirve saber hacer algo si no se explica correctamente. Por eso la comunicación es un pilar clave en la informática, especialmente en ambientes laborales donde se trabaja en equipo.
+    La informática es un campo en constante evolución; cada año surgen nuevas tecnologías, nuevos lenguajes, nuevos marcos de trabajo y nuevas formas de resolver problemas. El profesional informático no puede estancarse, debe mantenerse actualizado y estar dispuesto a reinventarse continuamente. Esa capacidad de adaptación lo convierte en uno de los perfiles más valiosos del siglo XXI. En este proyecto se explorarán los aspectos esenciales de la profesión desde un enfoque ético, técnico y social, permitiendo comprender su impacto en el mundo real.
+    </p>
+    <video controls><source src="video.mp4" type="video/mp4"></video>
+    <div class="umb">Universidad Mexiquense del Bicentenario - UMB</div>`;
+  }
+
+  else if(seccion==="perfil"){
+    html = `
+    <p>
+    El perfil profesional del informático se compone de conocimientos técnicos, habilidades cognitivas y valores personales que permiten diseñar, implementar, administrar y evaluar soluciones tecnológicas. Un informático debe comprender computación a profundidad: algoritmos, bases de datos, redes, ciberseguridad, sistemas operativos, análisis de datos, programación orientada a objetos, arquitectura de software y metodologías ágiles. Además del conocimiento técnico, el informático moderno debe tener pensamiento crítico para evaluar problemas, creatividad para proponer soluciones, disciplina para programar correctamente, ética para no vulnerar información y responsabilidad para entregar resultados confiables.
+    El perfil también incluye habilidades blandas: comunicación, liderazgo, trabajo en equipo, toma de decisiones, organización del tiempo y capacidad para enseñar lo que se sabe. La colaboración forma parte esencial, porque la mayoría de los proyectos tecnológicos no se hacen solos: se desarrollan junto a ingenieros, diseñadores, administradores, usuarios, clientes y directivos. Además, un buen informático es capaz de autodidactarse; gran parte del conocimiento tecnológico no se aprende en un salón, sino investigando, experimentando, leyendo documentación oficial y practicando.
+    La informática no es solo escribir código, sino diseñar soluciones eficaces y confiables que tengan un propósito real. Por eso la formación profesional debe ser integral: técnica, humana y social. Un informático con ética y responsabilidad tiene el potencial de transformar positivamente al mundo. Su trabajo, aunque muchas veces invisible, está presente en cada dispositivo, cada aplicación, cada sistema y cada tecnología que nos rodea.
+    </p>
+    <img src="imagen1.jpg">
+    <div class="umb">Universidad Mexiquense del Bicentenario - UMB</div>`;
+  }
+
+  else if(seccion==="ambitos"){
+    html = `
+    <p>
+    Los ámbitos laborales del profesional informático son cada vez más amplios. Hoy en día, prácticamente todas las empresas, organizaciones e instituciones públicas necesitan especialistas en sistemas. Un informático puede trabajar en bancos, hospitales, escuelas, compañías de telecomunicaciones, industrias automotrices, cadenas de supermercados, empresas de seguridad digital, desarrollo de software, videojuegos, inteligencia artificial, análisis de datos, robótica, internet de las cosas, soporte técnico, diseño de redes, infraestructura en la nube, servidores, páginas web y apps móviles.
+    La demanda crece porque la tecnología se volvió el centro de operaciones del mundo actual. Muchas decisiones importantes de negocios se toman con base en datos procesados por sistemas computacionales. Por eso, el informático no solo crea programas, sino que diseña herramientas para que otros puedan trabajar mejor. Inclusive el gobierno requiere informáticos para administrar sistemas fiscales, registros sociales, bases de datos de seguridad, control estadístico y sistemas de comunicación ciudadana.
+    El informático también puede crear su propio negocio digital: emprendimiento tecnológico, desarrollo freelance, consultoría de software, etc. Por lo tanto, es una profesión con gran potencial económico y social. Lo más interesante es que estos ámbitos no se limitarán en el futuro; al contrario, crecerán aún más, porque la digitalización del mundo apenas está comenzando.
+    </p>
+    <img src="imagen2.jpg">
+    <div class="umb">Universidad Mexiquense del Bicentenario - UMB</div>`;
+  }
+
+  else if(seccion==="etica"){
+    html = `
+    <p>
+    La ética profesional del informático es uno de los componentes más importantes de su formación. El manejo de datos, la privacidad, la ciberseguridad, la integridad del software y el impacto social de sus desarrollos exigen responsabilidades éticas profundas. Un informático puede tener acceso a información confidencial, datos financieros, expedientes clínicos, datos personales y secretos empresariales. Por ello debe actuar con honestidad y nunca utilizar el conocimiento técnico para hacer daño. La tecnología puede beneficiar al mundo, pero también puede ser usada para estafar, manipular, robar identidades, atacar redes o crear virus. La ética profesional evita que eso suceda.
+    La ética también implica transparencia: documentar adecuadamente, cumplir tiempos de entrega, justificar decisiones técnicas y no mentir sobre el progreso de un proyecto. Sin ética, la informática se convierte en una herramienta peligrosa. La responsabilidad de un informático no es únicamente programar bien; también es proteger la integridad moral de su trabajo. Cada decisión que toma puede influir en miles o millones de usuarios. En un mundo digital, la ética es tan poderosa como el conocimiento técnico.
+    </p>
+    <audio controls><source src="audio.mp3"></audio>
+    <div class="umb">Universidad Mexiquense del Bicentenario - UMB</div>`;
+  }
+
+  else if(seccion==="herramientas"){
+    html = `
+    <p>
+    Las herramientas y conocimientos base del profesional informático incluyen lenguajes de programación como Python, Java, C++, HTML, CSS, JavaScript, bases de datos como MySQL, SQL Server y MongoDB, sistemas operativos como Linux y Windows Server, software de modelado, frameworks como React, angular o spring, redes, algoritmos, arquitectura computacional, matemáticas discretas, estructuras de datos y lógica booleana. También se requiere entender metodologías ágiles como Scrum, DevOps y Kanban.
+    Además, el conocimiento base se forma a través del aprendizaje constante. La tecnología evoluciona tan rápido que lo que se aprende hoy puede estar obsoleto mañana. Por eso el informático debe estar dispuesto a leer, investigar, actualizarse y dominar nuevas herramientas constantemente. La mente del informático es similar a una caja de herramientas en crecimiento continuo.
+    </p>
+    <img src="gif.gif">
+    <div class="umb">Universidad Mexiquense del Bicentenario - UMB</div>`;
+  }
+
+  document.getElementById("contenido").innerHTML = html;
+}
+</script>
+
+</body>
+</html>
